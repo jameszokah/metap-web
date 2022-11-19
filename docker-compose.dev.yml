@@ -4,4 +4,4 @@ services:
     container_name: "ubuntu-linux"
     image: "ubuntu-metap"
     volumes:
-      - "./:/usr/app"
+      - "./:/appdocker"
