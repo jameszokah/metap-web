@@ -2,4 +2,4 @@ version: "3.9"
 services:
   linux: 
     container_name: "ubuntu-linux"
-    image: "ubuntu-linux"
+    image: "jameszokah/ubuntu-metap"

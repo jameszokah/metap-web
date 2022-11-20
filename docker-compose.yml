@@ -2,10 +2,9 @@ version: '3.9'
 services:
   linux:
     container_name: "ubuntu-linux"
-    image: "ubuntu-metap"
+    image: "jameszokah/ubuntu-metap"
     restart: "always"
     tty: true
     ports:
-      - "3001:3001"
-      - "2000-2020:2000-2020"
+      - "5000-5050:5000-5050"
       # - "10000-10100:10000-10100"
