@@ -1,7 +1,3 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
 
 import * as express from 'express';
 import * as path from 'path';
@@ -11,7 +7,7 @@ import * as fs from 'fs';
 
 const app = express();
 
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
+// app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 const option = {
   key: fs.readFileSync(path.resolve(__dirname, './assets/ssl/key.pem'), 'utf-8'),
@@ -20,10 +16,10 @@ const option = {
 
 const httpsServer = https.createServer(option, app);
 app.get('/api', (req, res) => {
-  res.send({ message: 'Welcome to metap-server!' });
+  res.send({ message: 'Welcome to metap-server! for mediasoup!' });
 });
 
-const port = process.env.port || 3333;
+const port = process.env.port || 4001;
 const server = httpsServer.listen(port, () => {
   console.log(`Listening at http://localhost:${port}/api`);
 });
