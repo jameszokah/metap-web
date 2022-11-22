@@ -9,13 +9,13 @@ import { Server } from 'socket.io';
 
 const app = express();
 
-// app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 const option = {
   key: fs.readFileSync(path.resolve(__dirname, './assets/ssl/key.pem'), 'utf-8'),
   cert: fs.readFileSync(path.resolve(__dirname, './assets/ssl/cert.pem'), 'utf-8')
 }
 
+const clientUrl = 'https://client.loca.lt';
 
 app.use(cors())
 const httpsServer = https.createServer(option, app);
@@ -25,7 +25,7 @@ app.get('/api', (req, res) => {
 
 const io = new Server(httpsServer, {
   cors: {
-    origin: 'https://jameszokah-expert-winner-rx4p4q6rxj2xqg5-4200.preview.app.github.dev/',
+    origin: clientUrl,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
     credentials: true,
   }

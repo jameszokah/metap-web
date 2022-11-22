@@ -13,9 +13,9 @@ const UserMedia: FC = () => {
 
 
     //  @ts-ignore
-    // socket.on('connection-success', (data: { socketId: string }) => {
-    //     console.log(data.socketId)
-    // })
+    socket.on('connection-success', (data: { socketId: string }) => {
+        console.log(data.socketId)
+    })
 
 
 
