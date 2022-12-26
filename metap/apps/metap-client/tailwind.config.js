@@ -6,16 +6,25 @@ const { createGlobPatternsForDependencies } = require('@nrwl/next/tailwind');
 
 module.exports = {
   presets: [require('../../tailwind-workspace-preset.js')],
-  purge: [
-    join(__dirname, 'pages/**/*.{js,ts,jsx,tsx}'),
-    ...createGlobPatternsForDependencies(__dirname),
-  ],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'dark-primary': '#1A222E'
+      }
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("flowbite/plugin")
+  ],
+  content: [
+    "./node_modules/flowbite/**/*.js",
+    "./node_modules/flowbite-react/**/*.js",
+    "./public/**/*.html",
+    "./src/**/*.{ts,tsx}",
+    ...createGlobPatternsForDependencies(__dirname),
+  ],
 };
