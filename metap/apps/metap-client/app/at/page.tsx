@@ -3,15 +3,15 @@ import type { NextPage } from "next";
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import Header from "../components/header";
-import Nav from "../components/nav";
-import Box from "../components/box";
-import Participants from "../components/participants";
-import Chats from "../components/chats";
-import VideoGridLayout from "../components/video_grid_layout";
-import ButtonDisplayLayout from "../components/button_display_layout";
-import { GroupOutlineIcon, Chevron, AddFillIcon } from "../components/icons";
-import Controls from "../components/controls";
+import Header from "../../components/header";
+import Nav from "../../components/nav";
+import Box from "../../components/box";
+import Participants from "../../components/participants";
+import Chats from "../../components/chats";
+import VideoGridLayout from "../../components/video_grid_layout";
+import ButtonDisplayLayout from "../../components/button_display_layout";
+import { GroupOutlineIcon, Chevron, AddFillIcon } from "../../components/icons";
+import Controls from "../../components/controls";
 
 const Home: NextPage = () => {
   const [open, setOpen] = useState(true);

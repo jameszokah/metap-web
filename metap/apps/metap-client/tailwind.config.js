@@ -10,7 +10,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'dark-primary': '#1A222E'
+        primary: "#14E8D8",
+        "dark-primary": "#1A222E",
+        "semi-dark": "#1F2937",
       }
     },
   },
@@ -18,7 +20,10 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require("flowbite/plugin")
+    require("flowbite/plugin"),
+    require("@shrutibalasa/tailwind-grid-auto-fit"),
+    require("tailwind-scrollbar-hide"),
+    require('tw-elements/dist/plugin'),
   ],
   content: [
     "./node_modules/flowbite/**/*.js",
